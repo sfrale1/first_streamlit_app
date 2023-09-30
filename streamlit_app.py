@@ -17,8 +17,8 @@ streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇');
 
 my_fruit_list = my_fruit_list.set_index('Fruit');
 
-fruits_selectd = streamlit.multiselect("Pick some fruits:", list (my_fruit_list.index),key='Lime');
-fruits_to_show = my_fruit_list.loc[fruits_selected];
+fruits_selectd = streamlit.multiselect("Pick some fruits:", list (my_fruit_list.index), '['Lime']);
+#fruits_to_show = my_fruit_list.loc[fruits_selected];
 
 #streamlit.dataframe(fruits_to_show);
 
