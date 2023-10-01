@@ -18,13 +18,13 @@ streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇');
 my_fruit_list = my_fruit_list.set_index('Fruit'); 
 
 fruits_selectd_dic = streamlit.multiselect("Pick some fruits:", list (my_fruit_list.index),  ['Lime','Orange']);
-fruits_selectd  = list(fruits_selectd_dic.values());
+#fruits_selectd  = list(fruits_selectd_dic.values());
 streamlit.write(fruits_selectd); 
 #streamlit.write (my_fruit_list);
 streamlit.dataframe(my_fruit_list);
-#streamlit.dataframe(fruits_selected);
+streamlit.dataframe(fruits_selected);
 
-fruits_to_show = my_fruit_list.loc[fruits_selectd];
+#fruits_to_show = my_fruit_list.loc[fruits_selectd];
 #streamlit.write (my_fruit_list);
 
 streamlit.dataframe(fruits_to_show);
