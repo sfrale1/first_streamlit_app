@@ -23,7 +23,7 @@ streamlit.write(fruits_selectd);
 streamlit.dataframe(my_fruit_list);
 #streamlit.dataframe(fruits_selected);
 
-fruits_to_show = my_fruit_list.loc[fruits_selected];
+fruits_to_show = my_fruit_list.loc[fruits_selectd];
 #streamlit.write (my_fruit_list);
 
 #streamlit.dataframe(fruits_to_show);
