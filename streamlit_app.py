@@ -35,6 +35,9 @@ fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+fruit_cho
 #streamlit.text(fruityvice_response);
 #streamlit.text(fruityvice_response.json());
 
+#Get Json converted to Dataframe 
+fruityvice_normalized = pandas.json_normalize(fruityvice_response.json());
+streamlit.dataframe(fruityvice_normalized);
 ##################################
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"]);
 my_cur = my_cnx.cursor();
@@ -44,8 +47,3 @@ streamlit.text("Hello from Snowflake:");
 streamlit.text(my_data_row);
 
 
-
-
-#Get Json converted to Dataframe 
-fruityvice_normalized = pandas.json_normalize(fruityvice_response.json());
-streamlit.dataframe(fruityvice_normalized);
